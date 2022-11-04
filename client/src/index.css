@@ -1,0 +1,34 @@
+body{
+  background: #202020;
+  color: white;
+}
+.navbar-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  list-style:none;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap:50px;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: rgba(0, 119, 255, 0.13);
+}
+
+.tarjeta{
+  
+
+  border-radius: 5px;
+  height: 200px;
+
+  border: 1px white solid;
+
+  width: 200px;
+}
