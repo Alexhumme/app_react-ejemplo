@@ -25,7 +25,6 @@ export const getTasks = async(req,res) =>{
 
 export const getTask = async(req,res) =>{
     try{
-        
         const [result] = await pool.query("SELECT * FROM tasks WHERE id = ?", [req.parasm.id]); //el await es necesario para que la carga de los datos se haga en segundo plano y no obstaculice la carga de la aplicacion
         console.log("resultado: "+result[0]);
         if (result.length === 0) {
@@ -41,8 +40,8 @@ export const getTask = async(req,res) =>{
 }
 export const createTask = async(req,res) =>{
     try{
-        const {title, description} = req.body;
-        const [result] = await pool.query("INSERT INTO tasks(title,content) VALUES(?,?)", [title,description]); //el await es necesario para que la carga de los datos se haga en segundo plano y no obstaculice la carga de la aplicacion
+        const {title, content} = req.body;
+        const [result] = await pool.query("INSERT INTO tasks(title,content) VALUES(?,?)", [title,content]); //el await es necesario para que la carga de los datos se haga en segundo plano y no obstaculice la carga de la aplicacion
         console.log("resultado: "+result);
         res.json({
             id: result.insertId,
