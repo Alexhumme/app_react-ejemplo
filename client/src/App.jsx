@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import axios from 'axios'
+import React from 'react'
 import Navbar from './components/navbar'
 import Lists from './components/lists'
 import {Route,Routes} from "react-router-dom" //importar una dependencia de react llamada dom
